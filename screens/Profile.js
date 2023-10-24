@@ -6,16 +6,17 @@ const Stack = createNativeStackNavigator();
 
 export default function Profile({navigation}) {
   return (
-    <Stack.Navigator>
-        <Stack.Screen name="Profile" component={Profile} options={{title:'profile'}}/>
-      </Stack.Navigator>
+    <View style={styles.container}>
+    <Text>profile</Text>
+    <StatusBar style="auto" />
+</View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#f00',
     alignItems: 'center',
     justifyContent: 'center',
   },

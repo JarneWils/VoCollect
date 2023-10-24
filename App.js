@@ -9,13 +9,14 @@ import Profile from './screens/Profile';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} options={{headerShown: false}}/>
-        <Tab.Screen name="Cart" component={Cart} options={{headerShown: false}}/>
-        <Tab.Screen name="Search" component={Search} options={{headerShown: false}}/>
-        <Tab.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
+        <Tab.Screen name="Home" component={Home} options={{headerShown: true}}/>
+        <Tab.Screen name="Search" component={Search} options={{headerShown: true}}/>
+        <Tab.Screen name="Cart" component={Cart} options={{headerShown: true}}/>
+        <Tab.Screen name="Profile" component={Profile} options={{headerShown: true}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

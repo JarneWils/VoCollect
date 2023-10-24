@@ -6,9 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 export default function Search() {
-  return (
-      <Stack.Navigator>
-        <Stack.Screen name="Profile" component={Profile} options={{title:'Search'}}/>
-      </Stack.Navigator>
+      return (
+    <View>
+    <Text>profile</Text>
+    <StatusBar style="auto" />
+</View>
   );
-}
+      }

@@ -7,8 +7,9 @@ const Stack = createNativeStackNavigator();
 
 export default function Cart() {
   return (
-      <Stack.Navigator>
-        <Stack.Screen name="Profile" component={Profile} options={{title:'Cart'}}/>
-      </Stack.Navigator>
-  );
-}
+<View>
+<Text>profile</Text>
+<StatusBar style="auto" />
+</View>
+);
+  }
