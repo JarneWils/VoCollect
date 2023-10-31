@@ -16,7 +16,7 @@ export default function Home({ navigation }) {
     if (!fontsLoaded && !fontError) { return null;}
   return (
     <View style={styles.container}>
-        <Text style={styles.text}>{network.stations.name}</Text>
+        <Text> O ow </Text>
         <StatusBar style="auto" />
     </View>
   );
@@ -25,14 +25,14 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    color: '#f00',
     fontFamily: 'Inter_600SemiBold',
     fontSize: 40,
     fontWeight: 'Inter_900Black',
-  }  
+  },
 });

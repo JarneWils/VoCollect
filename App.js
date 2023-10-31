@@ -13,10 +13,50 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} options={{headerShown: true}}/>
-        <Tab.Screen name="Search" component={Search} options={{headerShown: true}}/>
-        <Tab.Screen name="Cart" component={Cart} options={{headerShown: true}}/>
-        <Tab.Screen name="Profile" component={Profile} options={{headerShown: true}}/>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerShown: true,
+          headerStyle: {
+          backgroundColor: '#fff',
+          elevation: 10,
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
+        options={{
+          headerShown: true,
+          headerStyle: {
+          backgroundColor: '#fff',
+          elevation: 10,
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          headerShown: true,
+          headerStyle: {
+          backgroundColor: '#fff',
+          elevation: 10,
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          headerShown: true,
+          headerStyle: {
+          backgroundColor: '#fff',
+          elevation: 10,
+          },
+        }}
+      />
       </Tab.Navigator>
     </NavigationContainer>
   );
