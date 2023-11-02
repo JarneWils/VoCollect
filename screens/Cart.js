@@ -1,6 +1,6 @@
 import Profile from './Profile';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
 

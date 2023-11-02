@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image , TouchableOpacity, ScrollView} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
 
@@ -24,9 +24,9 @@ export default function Profile({navigation}) {
 
   //De Inhoud van de pagina//
   return (
-    <View style={styles.container}>
-
-      <View style={styles.profielFoto}></View>
+   <View style={styles.container}>
+      
+      <Image style={styles.profielFoto} source={require('../assets/Damp.jpg')} />
 
       <Text style={styles.gebruikersNaam}>Jarne Wils</Text>
 
@@ -63,6 +63,81 @@ export default function Profile({navigation}) {
       </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
+
+
+      <ScrollView>
+        <View style={styles.postContainer}>
+          
+          <View style={styles.post}>
+            <View style={styles.addPostButton}>
+              <TouchableOpacity style={styles.addPost} onPress={handleButtonPress}>
+                <View style={styles.addPostIcon}></View>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+          <View style={styles.post}>
+            <View style={styles.postImage}></View>
+            <Text style={styles.postViews}>1.6K</Text>
+          </View>
+
+        </View>
+      </ScrollView>   
     </View>
   );
 }
@@ -80,19 +155,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   profielFoto: {
-    width: 110,
-    height: 110,
+    width: 120,
+    height: 120,
     borderRadius: 100,
-    backgroundColor: '#fff',
-    position: 'relative', 
-    top: -190,
+    position: 'relative',
+    top: 40,
   },
   gebruikersNaam: {
     color: '#4F4F4F',
     fontFamily: 'Inter_600SemiBold',
     fontSize: 18,
     position: 'relative',
-    top: -170,
+    top: 45,
   },
   bio: {
     width: 180,
@@ -101,7 +175,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     textAlign: 'center',
     position: 'relative',
-    top: -170,
+    top: 45,
   },
   editProfile: {
     width: 100,
@@ -109,7 +183,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: '#E85E79',
     position: 'relative',
-    top: -150,
+    top: 55,
   },
   editProfileText: {
     color: '#F5F5F5',
@@ -122,12 +196,13 @@ const styles = StyleSheet.create({
   followersContainer: {
     width: 200,
     height: 100,
+    marginBottom: 140,
     flexDirection: 'row',
-    position: 'relative',
-    top: -130,
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: 'black',
+    position: 'relative',
+    top: 90,
   },
   followersInfo: {
     width: 100,
@@ -152,12 +227,43 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: '#fff',
     position: 'relative',
-    top: -100,
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: 21,
   },
   categoryButtons: {
     width: 100,
+  },
 
+
+  postContainer: {
+    width: 425,
+    marginBottom: 15,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    position: 'relative',
+    top: 0,
+  },
+  post: {
+    width: 125,
+    height: 125,
+    marginTop: 12,
+    marginLeft: 12,
+    borderRadius: 15,
+    backgroundColor: '#999999',
+    position: 'relative',
+  },
+  addPostButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  addPostIcon: {
+    width: 50,
+    height: 50,
+    borderWidth: 4,
+    borderColor: '#7026ED',
+    borderRadius: 15,
+    position: 'relative',
+    top: 38,
   }
 });
