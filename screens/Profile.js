@@ -28,7 +28,7 @@ export default function Profile({navigation}) {
       
       <Image style={styles.profielFoto} source={require('../assets/Damp.jpg')} />
 
-      <Text style={styles.gebruikersNaam}>Jarne Wils</Text>
+      <Text style={styles.gebruikersNaam}>SHNOEPIEEEE</Text>
 
       <Text style={styles.bio}>Without music, life would be a mistake.</Text>
 
@@ -249,8 +249,8 @@ const styles = StyleSheet.create({
     height: 125,
     marginTop: 12,
     marginLeft: 12,
-    borderRadius: 15,
-    backgroundColor: '#999999',
+    backgroundColor: '#fff',
+    borderRadius: 20,
     position: 'relative',
   },
   addPostButton: {
@@ -264,6 +264,6 @@ const styles = StyleSheet.create({
     borderColor: '#7026ED',
     borderRadius: 15,
     position: 'relative',
-    top: 38,
+    top: 36,
   }
 });
