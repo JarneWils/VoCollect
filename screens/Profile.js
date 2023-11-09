@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image , TouchableOpacity, ScrollView} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
+import ProfielPost from '../components/ProfielPost';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 //Navigatie//
 const Stack = createNativeStackNavigator();
@@ -66,77 +68,7 @@ export default function Profile({navigation}) {
 
 
       <ScrollView>
-        <View style={styles.postContainer}>
-          
-          <View style={styles.post}>
-            <View style={styles.addPostButton}>
-              <TouchableOpacity style={styles.addPost} onPress={handleButtonPress}>
-                <View style={styles.addPostIcon}></View>
-              </TouchableOpacity>
-            </View>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-          <View style={styles.post}>
-            <View style={styles.postImage}></View>
-            <Text style={styles.postViews}>1.6K</Text>
-          </View>
-
-        </View>
+        <ProfielPost/>
       </ScrollView>   
     </View>
   );
@@ -234,36 +166,4 @@ const styles = StyleSheet.create({
   categoryButtons: {
     width: 100,
   },
-
-
-  postContainer: {
-    width: 425,
-    marginBottom: 15,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    position: 'relative',
-    top: 0,
-  },
-  post: {
-    width: 125,
-    height: 125,
-    marginTop: 12,
-    marginLeft: 12,
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    position: 'relative',
-  },
-  addPostButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  addPostIcon: {
-    width: 50,
-    height: 50,
-    borderWidth: 4,
-    borderColor: '#7026ED',
-    borderRadius: 15,
-    position: 'relative',
-    top: 36,
-  }
 });
