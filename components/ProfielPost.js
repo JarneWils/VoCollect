@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 //Profiel-pagina//
 export default function ProfielPost() {
@@ -24,7 +25,11 @@ export default function ProfielPost() {
             <View style={styles.post}>
                 <View style={styles.addPostButton}>
                 <TouchableOpacity style={styles.addPost} onPress={handleButtonPress}>
-                    <View style={styles.addPostIcon}></View>
+                    <Ionicons 
+                        name="add-circle-outline" 
+                        size={45}
+                        color="#7026ED"
+                        style={styles.addPostIcon}/>
                 </TouchableOpacity>
                 </View>
             </View>
@@ -98,7 +103,8 @@ const styles = StyleSheet.create({
 //Styles van de component//
 postContainer: {
     width: 425,
-    marginBottom: 15,
+    backgroundColor: '#F5F5F5',
+    paddingBottom: 15,
     flexDirection: 'row',
     flexWrap: 'wrap',
     position: 'relative',
@@ -120,11 +126,8 @@ postContainer: {
   addPostIcon: {
     width: 50,
     height: 50,
-    borderWidth: 4,
-    borderColor: '#7026ED',
-    borderRadius: 15,
     position: 'relative',
-    top: 36,
+    top: 38,
   },
   postViews: {
     fontFamily: 'Inter_600SemiBold',

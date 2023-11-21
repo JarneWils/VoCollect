@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image , TouchableOpacity, ScrollView} from 'rea
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
 import ProfielPost from '../components/ProfielPost';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 //Navigatie//
 const Stack = createNativeStackNavigator();
@@ -13,7 +13,7 @@ export default function Profile({navigation}) {
 
 //Edit Profile button//
   const handleButtonPress = () => {
-    alert('Nog geen functie');
+    alert('nog geen functie');
   }
 
 //Fonts inladen//
@@ -30,7 +30,7 @@ export default function Profile({navigation}) {
       
       <Image style={styles.profielFoto} source={require('../assets/Damp.jpg')} />
 
-      <Text style={styles.gebruikersNaam}>SHNOEPIEEEE</Text>
+      <Text style={styles.gebruikersNaam}>Jarne Wils</Text>
 
       <Text style={styles.bio}>Without music, life would be a mistake.</Text>
 
@@ -52,17 +52,18 @@ export default function Profile({navigation}) {
           <Text style={styles.followersTitle}>Likes</Text>
         </View>
       </View>
-
+      <View style={{ overflow: 'hidden', paddingBottom: 3,}}>
       <View style={styles.categoryContainer}>
       <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}>MIC</Text>
+        <Text style={styles.editProfileText}><Ionicons name="mic-outline" size={30} color="#7026ED"/></Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}>HEART</Text>
+        <Text style={styles.editProfileText}><Ionicons name="heart-outline" size={30} color="#7026ED"/></Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}>DOLLAR</Text>
+        <Text style={styles.editProfileText}><Ionicons name="cash-outline" size={30} color="#7026ED"/></Text>
       </TouchableOpacity>
+      </View>
       </View>
       <StatusBar style="auto" />
 
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
 //Styles van de pagina//
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 20,
     borderRadius: 100,
-    backgroundColor: '#E85E79',
+    backgroundColor: '#7026ED',
     position: 'relative',
     top: 55,
   },
@@ -157,11 +158,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 425,
     height: 50,
-    backgroundColor: '#fff',
     position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 21,
+    backgroundColor: '#fff',
+        shadowColor: '#000',
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity:  0.4,
+        shadowRadius: 3,
+        elevation: 3,
   },
   categoryButtons: {
     width: 100,
