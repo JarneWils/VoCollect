@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView} from 'react-native';
 import { Image } from 'react-native';
 import useNetwork from '../data/network';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
+import HomePost from '../components/HomePost';
 
 export default function Home({ navigation }) {
     const {network, isLoading, isError} = useNetwork();
@@ -16,8 +17,9 @@ export default function Home({ navigation }) {
     if (!fontsLoaded && !fontError) { return null;}
   return (
     <View style={styles.container}>
-        <Text> O ow </Text>
-        <StatusBar style="auto" />
+      <ScrollView>
+        <HomePost/>
+      </ScrollView>   
     </View>
   );
 }
