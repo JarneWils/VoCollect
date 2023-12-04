@@ -19,6 +19,11 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <ScrollView>
         <HomePost/>
+        <HomePost/>
+        <HomePost/>
+        <HomePost/>
+        <HomePost/>
+        <HomePost/>
       </ScrollView>   
     </View>
   );

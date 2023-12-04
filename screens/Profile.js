@@ -52,18 +52,20 @@ export default function Profile({navigation}) {
           <Text style={styles.followersTitle}>Likes</Text>
         </View>
       </View>
+
       <View style={{ overflow: 'hidden', paddingBottom: 3,}}>
+
       <View style={styles.categoryContainer}>
-      <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}><Ionicons name="mic-outline" size={30} color="#7026ED"/></Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}><Ionicons name="heart-outline" size={30} color="#7026ED"/></Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}><Ionicons name="cash-outline" size={30} color="#7026ED"/></Text>
-      </TouchableOpacity>
-      </View>
+        <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
+          <Text style={styles.editProfileText}><Ionicons name="mic-outline" size={30} color="#7026ED"/></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
+          <Text style={styles.editProfileText}><Ionicons name="heart-outline" size={30} color="#7026ED"/></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
+          <Text style={styles.editProfileText}><Ionicons name="cash-outline" size={30} color="#7026ED"/></Text>
+        </TouchableOpacity>
+        </View>
       </View>
       <StatusBar style="auto" />
 
@@ -163,11 +165,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     zIndex: 21,
     backgroundColor: '#fff',
-        shadowColor: '#000',
-        shadowOffset: { width: 1, height: 1 },
-        shadowOpacity:  0.4,
-        shadowRadius: 3,
-        elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity:  0.4,
+    shadowRadius: 3,
+    elevation: 3,
   },
   categoryButtons: {
     width: 100,
