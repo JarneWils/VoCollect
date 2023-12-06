@@ -11,6 +11,7 @@ export default function HomePost() {
     alert('Nog geen functie');
     }
 
+
     //Fonts inladen//
     let [fontsLoaded, fontError] = useFonts({
         Inter_900Black,
@@ -20,11 +21,13 @@ export default function HomePost() {
     if (!fontsLoaded && !fontError) { return null;}
 
 
+    //AUDIO//
+
 
     //De Inhoud van de pagina//
     //<Image style={styles.postFoto} source={require('../assets/Damp.jpg')} />
     return (
-        <ScrollView>
+        <ScrollView>            
         <View style={styles.container}>
             <View style={styles.profielContainer}>
                 <Image style={styles.profielFoto} source={require('../assets/Damp.jpg')} />
@@ -56,6 +59,7 @@ container: {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 80,
+    paddingBottom: 15,
 },
 profielContainer: {
     flexDirection: 'row',
@@ -66,7 +70,7 @@ profielContainer: {
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity:  0.4,
     shadowRadius: 3,
-    elevation: 8,
+    elevation: 4,
 },
 profielFoto: {
     marginTop: -40,
