@@ -7,7 +7,7 @@ export default function ProfielPost() {
 
     //Edit Profile button//
     const handleButtonPress = () => {
-    alert('Nog geen functie');
+    alert('nog geen functie');
     }
 
     //Fonts inladen//

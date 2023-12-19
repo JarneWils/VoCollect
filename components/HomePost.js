@@ -1,6 +1,11 @@
-import { StyleSheet, Text, Image, View, TouchableOpacity, ScrollView,} from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity, ScrollView} from 'react-native';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
 import Ionicons from '@expo/vector-icons/Ionicons';
+//import Sound from 'react-native-sound';
+//import Slider from '@react-native-community/slider';
+//import TrackPlayer from 'react-native-track-player';
+import React, {useState, useEffect} from 'react';
+import { Audio } from 'expo-av';
 
 
 //Profiel-pagina//
@@ -12,6 +17,7 @@ export default function HomePost() {
     }
 
 
+
     //Fonts inladen//
     let [fontsLoaded, fontError] = useFonts({
         Inter_900Black,
@@ -21,8 +27,10 @@ export default function HomePost() {
     if (!fontsLoaded && !fontError) { return null;}
 
 
+
     //AUDIO//
 
+    
 
     //De Inhoud van de pagina//
     //<Image style={styles.postFoto} source={require('../assets/Damp.jpg')} />
@@ -34,7 +42,6 @@ export default function HomePost() {
                 <Text style={styles.TitleName}>Jarne</Text>
                 <Text style={styles.SongTitle}>Prachtige stem die je zeker wilt kopen</Text>
                 <View style={styles.iconContainer}>
-                  <Text style={styles.like}><Ionicons name="heart-outline" size={25} color="#7026ED"/></Text>
                   <Text style={styles.download}><Ionicons name="download-outline" size={25} color="#7026ED"/></Text>
                 </View>
             </View>
@@ -49,7 +56,6 @@ export default function HomePost() {
 }
 
 
-
 const styles = StyleSheet.create({
 
 //Styles van de component//
@@ -58,8 +64,8 @@ container: {
     backgroundColor: '#F5F5F5',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 80,
-    paddingBottom: 15,
+    marginTop: 70,
+    paddingBottom: 5,
 },
 profielContainer: {
     flexDirection: 'row',
@@ -102,11 +108,7 @@ SongTitle:{
 iconContainer:{
     flexDirection: 'row',
     position: 'relative',
-    left: -80,
-},
-like:{
-    top: 80,
-    paddingLeft: 15,
+    left: -45,
 },
 download:{
     top: 77,

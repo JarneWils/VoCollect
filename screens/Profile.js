@@ -60,7 +60,7 @@ export default function Profile({navigation}) {
           <Text style={styles.editProfileText}><Ionicons name="mic-outline" size={30} color="#7026ED"/></Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
-          <Text style={styles.editProfileText}><Ionicons name="heart-outline" size={30} color="#7026ED"/></Text>
+          <Text style={styles.editProfileText}><Ionicons name="download-outline" size={30} color="#7026ED"/></Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryButtons} onPress={handleButtonPress}>
           <Text style={styles.editProfileText}><Ionicons name="cash-outline" size={30} color="#7026ED"/></Text>
@@ -174,4 +174,8 @@ const styles = StyleSheet.create({
   categoryButtons: {
     width: 100,
   },
+  downloadIcon: {
+    position:'relative',
+    top: -10,
+  }
 });
