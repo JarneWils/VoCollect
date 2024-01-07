@@ -10,7 +10,7 @@ import AudioPlayer from './AudioPlayer';
 
 
 //Profiel-pagina//
-export default function HomePost() {
+export default function CartPost() {
 
     //Edit Profile button//
     const handleButtonPress = () => {
@@ -43,7 +43,7 @@ export default function HomePost() {
                 <Text style={styles.TitleName}>Jarne</Text>
                 <Text style={styles.SongTitle}>Prachtige stem die je zeker wilt kopen</Text>
                 <View style={styles.iconContainer}>
-                  <Text style={styles.download}><Ionicons name="cart-outline" size={20} color="#E93558"/></Text>
+                  <Text style={styles.download}><Ionicons name="trash-outline" size={20} color="#E93558"/></Text>
                 </View>
             </View>
         </View>

@@ -1,4 +1,3 @@
-import Profile from './Profile';
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
@@ -6,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
 import { Audio } from 'expo-av';
 import AudioPlayer from '../components/AudioPlayer';
+import CartPost from '../components/CartPost';
 
 //Navigatie//
 const Stack = createNativeStackNavigator();
@@ -27,9 +27,7 @@ export default function Cart() {
   //De Inhoud van de pagina//
   return (
   <View style={styles.container}>
-    <View style={styles.audio}>
-      <AudioPlayer/>
-    </View>
+    <CartPost/>
   <StatusBar style="auto" />
   </View>
   );
@@ -39,10 +37,7 @@ const styles = StyleSheet.create({
 
 //Styles van de pagina//
   container: {
-    flex: 1,
     backgroundColor: '#f0f0f0',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   audio: {
     height: 350,

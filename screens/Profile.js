@@ -35,7 +35,7 @@ export default function Profile({navigation}) {
       <Text style={styles.bio}>Without music, life would be a mistake.</Text>
 
       <TouchableOpacity style={styles.editProfile} onPress={handleButtonPress}>
-        <Text style={styles.editProfileText}>Edit profile</Text>
+        <Text style={styles.editProfileText}>Log out</Text>
       </TouchableOpacity>
 
       <View style={styles.followersContainer}>
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 20,
     borderRadius: 100,
-    backgroundColor: '#7026ED',
+    backgroundColor: '#E93558',
     position: 'relative',
     top: 55,
   },

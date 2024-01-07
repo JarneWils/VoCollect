@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View, ScrollView} from 'react-native';
-import { Image } from 'react-native';
 import useNetwork from '../data/network';
+import { Image } from 'react-native';
 import { useFonts, Inter_900Black, Inter_400Regular, Inter_600SemiBold } from '@expo-google-fonts/inter';
 import HomePost from '../components/HomePost';
 

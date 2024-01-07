@@ -1,18 +1,37 @@
+import React, {useState} from 'react';
 import Home from './screens/Home';
 import Cart from './screens/Cart';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Search from './screens/Search';
 import Profile from './screens/Profile';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import useData from './data/api';
+import LoginScreen from './screens/Login';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
 
+  const [isLoggedin, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
+  const [iserData, setUserData] = useState(null);
+
+  const handleLogin = (loggedInUsername) => {
+    setUsername(loggedInUsername);
+    setIsLoggedIn(true);
+    const {userData} = useData(username, password);
+    setUserData(userData);
+  };
+  const handleLogout = () => {
+    setUsername('');
+    setIsLoggedIn(false);
+  };
+
+
   return (
     <NavigationContainer>
+      
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarStyle: {
@@ -70,5 +89,5 @@ export default function App() {
       />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+    );
 };
