@@ -31,7 +31,11 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      
+  {/* 
+     {!isLoggedin ? (
+        <LoginScreen onLogin={handleLogin} setIsLoggedIn={setIsLoggedIn} setUserData={setUserData}/>
+      ) : (
+  */}
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarStyle: {
@@ -88,6 +92,9 @@ export default function App() {
         }}
       />
       </Tab.Navigator>
+    {/* 
+      )}
+    */}
     </NavigationContainer>
     );
 };
